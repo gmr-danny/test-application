@@ -202,7 +202,7 @@ router.put('/addDefense/:id', async (req, res) =>{
 		// update title 
 
 
-		res.redirect('http://localhost:3000/api/titles/manageDefenses/' + req.params.id);
+		res.redirect('/api/titles/manageDefenses/' + req.params.id);
 
 	} catch(err) {
 		console.log("error", err)
