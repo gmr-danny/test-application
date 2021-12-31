@@ -16,12 +16,7 @@
 		<h3> Add Defenses </h3>
 		<span id="defenses"> 
 			<!-- edit defenses -->
-			<h5> Challenger </h5>
-			<select name="challenger"> 
-				<% for(let i = 0; i < allSuperstars.length; i++) {%>
-					<option value="<%= allSuperstars[i].name %>"> <%= allSuperstars[i].name %> </option>
-				<%}%>
-			</select>
+			<input type="text" name="challenger" placeholder="challenger" />
 
 			<!-- add new defense -->
 			<input type="text" name="result" placeholder="result" /> 
