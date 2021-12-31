@@ -1,0 +1,26 @@
+<% include ../partials/_head %>
+<% include ../partials/_header %>
+
+	<p> this is a temporary page</p>
+
+
+	<% for (let a = 0; a < user.length; a++) { %>
+		Name: <a href="/user/<%=user[a]._id%>/profile"> <%= user[a].name%> </a>
+		Age: <%= user[a].age%>
+		About: <%= user[a].about%>
+		Gender: <%= user[a].gender%>
+		Preferred Dates:
+		<%	for (let b = 0; b < user[a].preferredDates.length; b++) {%>
+			<%=b%> : <%= user[a].preferredDates[b]%>
+			<br>
+		<%	} %>
+		<br>
+
+		<form action='/user/<%= user[a]._id%>?_method=DELETE' method="POST">
+			<button type="submit"> delete </button>
+		</form>
+	<%}%>
+
+
+
+<% include ../partials/_footer %>

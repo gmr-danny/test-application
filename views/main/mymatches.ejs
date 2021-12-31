@@ -1,0 +1,20 @@
+<% include ../partials/_head %>
+<% include ../partials/_header %>
+
+
+	<% for (let a = 0; a < allMatches.length; a++ ) { %>
+<!-- 		<a href= `mailto: ${allMatches[a].email}`>testx</a>
+ -->	<div class="card">
+			<img class="user-photo" src="<%= allMatches[a].picture%>" alt="user-photo">
+			<h2><%= allMatches[a].name%>, <%= allMatches[a].age%> </h2> 
+			<form action='/user/my-matches/<%= user._id%>?_method=PUT' method='POST'>
+				<button class="btn btn-secondary btn-lg" type='submit' name='removeMatch' value='<%= a %>'> Ghost </button>
+			</form>
+		</div>
+ 		
+	<% }%>
+	<button  id="dif" class= "btn btn-secondary btn-lg" aria-pressed="false" name="button" onclick="window.location.href='/user/<%= user._id%>/main'">Back to Swiping</button>
+
+
+<% include ../partials/_footer %>
+

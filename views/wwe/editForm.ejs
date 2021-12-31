@@ -1,0 +1,30 @@
+<% include ../partials/_head %>
+	<form action="/api/roster" method="POST">
+		<h3> Create New Superstar </h3>
+
+		<input type="text" name="name" placeholder="Name" required/> <br/>
+		<input type="text" name="brand" placeholder="Brand" /> <br/>
+
+		<button type="submit">Create</button>
+    </form>
+    <ul> 
+	    <% for(let index in allSuperstar) {%>
+	    	<li> 
+	    		<% let superstar =  allSuperstar[index] %> 
+    			<form action="/api/roster/<%= superstar._id%>?_method=PUT" method="POST">
+					<h3> Edit</h3>
+
+					<input type="text" name="name" value="<%=superstar.name%>" required/> <br/>
+					<input type="text" name="brand" value="<%=superstar.brand%>" /> <br/>
+
+					<button type="submit">Change</button>
+			    </form>
+
+
+	    		<form action="/api/roster/<%=allSuperstar[index]._id%>?_method=DELETE" method="post">
+		            <input type="submit" value="Delete"/>
+		        </form>
+	    	</li>
+	    <%}%>
+	</ul>
+<% include ../partials/_footer %>

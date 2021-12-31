@@ -1,0 +1,52 @@
+	<% include partials/_head %>
+	<body class="cover"> 
+		<% include partials/_header %>
+
+			<div class="row ">
+				<div class="col-lg-6">
+					<div class="card">
+						<form action="/auth" method="POST" >
+
+
+
+<!-- 		<div class="form-group">
+			<label for="Name">Photo</label>
+			<input type="file"  name="picture" /><br>
+		</div> -->
+							<h2>Sign up</h2>
+							<div class="form-group">
+								<label for="Username">Username:</label>
+								<input type="text" class="form-control" name="username" required/><br>
+							</div>
+							<div class="form-group">
+								<label for="Email">Email Address:</label>
+								<input type="text" class="form-control" name="email"/><br>
+							</div>
+							<div class="form-group">
+								<label for="Password">Password:</label>
+								<input type="password" class="form-control" name="password" required/><br>    <!-- changed this to password type -->
+							</div>
+
+							<% if (message) { %>
+				        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+				          <%= message %>
+				          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				            <span aria-hidden="true">&times;</span>
+				          </button>
+				        </div>
+				      <% } %>
+
+							<button  class= "btn btn-primary btn-lg" aria-pressed="false"type="submit" name="button">Register</button>
+						</form>
+
+						<h5>Already registered? <a class= "textBtn"href="/auth/login">Login</a></h5>
+					</div>
+				</div>
+				<!-- <div class="col-lg-6">
+					<div class="col-right">
+						<h5>Already registered?</h5>
+						<a class= "textBtn"href="/auth/login">Login</a>
+					</div>
+				</div> -->
+			</div>
+</body>

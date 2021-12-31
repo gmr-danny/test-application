@@ -1,0 +1,40 @@
+<% include ../partials/_head %>
+
+	<h1> <%= title.name %> </h1>
+
+	<form action="/api/titles/deleteChampion/<%= title._id %>?_method=PUT" method="POST"> 
+        <input type="submit" value="Delete ALL History"/>
+	</form>
+
+	<form action="/api/titles/addChampion/<%= title._id %>?_method=PUT" method="POST"> 
+
+		<h3> Add Champion: </h3>
+		<select name="champId"> 
+			<% for(let i = 0; i < allSuperstars.length; i++) {%>
+				<option value="<%= allSuperstars[i]._id %>"> <%= allSuperstars[i].name %> </option>
+			<%}%>
+		</select>
+    
+		<button type="submit">Save</button>
+
+	</form>
+
+	<!-- list all champions -->
+
+ 	<table>
+		<% for(let i = 0; i < reignList.length; i++) {%>
+			<tr> 
+				<td><%= reignList[i].term%>. </td>
+				<td><%= reignList[i].champ.name%> </td>
+				<td> (<%= reignList[i].reignNumber%>) </td>
+				<td> <a href="/api/titles/manageDefenses/<%=reignList[i]._id %> ">Add defense</a> </td>
+			</tr>
+		<%}%>
+	</table>	
+
+
+
+
+
+
+<% include ../partials/_footer %>

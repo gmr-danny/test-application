@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> hidden from the user </title>
+</head>
+<body>
+	<p> all possible dates </p>
+
+
+
+	<% for (let a = 0; a < dates.length; a++) {%>
+		<%= dates[a].name%> 
+		<%= dates[a].type%>
+
+		<%= dates[a].price%>
+
+		<%= dates[a].address%>
+
+
+	<% } %>
+
+
+	<form action="/dates"  method="POST">
+		name: <input type="text" name="name"> <br>
+		type: <input type="text" name="type"> <br>
+		price: <input type="text" name="name"> <br>
+		address: <input type="text" name="address"> <br>
+		<button type="submit"> create </button>
+	</form>
+
+</body>
+</html>

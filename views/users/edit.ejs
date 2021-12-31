@@ -1,0 +1,31 @@
+<% include ../partials/_head %>
+<% include ../partials/_header %>
+
+<div class="card">
+	<form action="/user/<%= user.id %>?_method=PUT" method="POST" >
+		<div class="form-group">
+			<label for="Name">Name:</label>
+			<input type="text" class="form-control" name="name" /><br>
+		</div>
+
+		
+
+		<div class="form-group">
+			<label for="Age">Age:</label>
+			<input type="number" class="form-control"  name="age" /><br>
+		</div>
+		<div class="form-group">
+			<label for="gender">Gender:</label>
+			<select class="form-control" id="sel1" name="gender">
+				<option value="female">Female</option>
+				<option value="male">Male</option>
+				<option value="non-binary">Non-binary</option>
+			</select>
+		</div>
+		<p> About </p> <textarea type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" name="about" ></textarea><br>
+		<button  class= "btn btn-primary btn-lg" aria-pressed="false"type="submit" name="button">Ready?</button>
+	</form>
+</div>
+
+
+	<% include ../partials/_footer %>
