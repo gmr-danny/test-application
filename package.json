@@ -9,8 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^3.0.3",
-    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "boostrap": "^2.0.0",
     "db": "^1.1.1",
