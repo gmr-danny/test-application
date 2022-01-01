@@ -103,7 +103,8 @@ router.put('/addChampion/:id', async (req, res) => {
 
 		// Find all reigns with same champ id 
 		const reignList = await Reigns.find({
-			'champ.champId': champion._id
+			'champ.champId': champion._id,
+			'titleType': title.name
 		}).sort({'reignNumber': "descending"});
 
 		console.log("reignList", reignList)
@@ -112,7 +113,8 @@ router.put('/addChampion/:id', async (req, res) => {
 		let newReign = {
 			champ: {name: champion.name, champId: champion._id},
 			term: title.history.length + 1, 
-			reignNumber: newReignNum
+			reignNumber: newReignNum,
+			titleType: title.name
 		}
 
 		// create reign 

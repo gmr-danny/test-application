@@ -8,6 +8,8 @@ const reignsSchema = mongoose.Schema({
 	term: Number, 
 	
 	// champ: Superstar.schema, 
+	titleType: {type:String, default:"raw"}, 
+
 	champ: {
 		name: String, 
 		champId: String
