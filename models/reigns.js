@@ -5,7 +5,8 @@ const Defenses = require('./defenses');
 
 const reignsSchema = mongoose.Schema({
 	// titleId? 
-	term: {type: Number , unique: true}, 
+	term: Number, 
+	
 	// champ: Superstar.schema, 
 	champ: {
 		name: String, 
