@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 const Superstar = require('./superstar');
-const Defenses = require('./defenses');
 
 const reignsSchema = mongoose.Schema({
 	// titleId? 
