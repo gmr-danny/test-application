@@ -10,16 +10,10 @@ This is our recreation of the popular app, Tinder, with an additional feature of
 * **Node.js, Express.js**
 * **MongoDB / Mongoose**
 * **Javascript**
-* **Embedded Javascript**
+* **EJS**
 * **HTML**
 * **CSS**
 * **Git**
-
-### Installation Requirements
-
-Clone the repo and install the following NPM packages:
-
-```npm install node express body-parser method-override mongodb mongoose express-sessions bcrypt ejs```
 
 
 ### Features
